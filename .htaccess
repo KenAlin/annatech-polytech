@@ -1,0 +1,4 @@
+# Some rewrite code for better URL
+RewriteEngine on
+RewriteCond $1 !^(index\.php|content)
+RewriteRule ^(.*)$ /index.php/$1 [L]
