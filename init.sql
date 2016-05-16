@@ -1,5 +1,5 @@
 SET CLIENT_ENCODING TO 'UTF8';
-;;fjh;;
+
 DROP TABLE "correspondance";
 DROP TABLE "sujets";
 DROP TABLE "utilisateurs";
@@ -32,17 +32,17 @@ CREATE TABLE "sections"(
    color		CHAR(6)					NOT NULL
 );
 INSERT INTO "sections" VALUES ('IG', 'Informatique et Gestion', 'IG.png', 'E2017A');
-INSERT INTO "sections" VALUES ('ENR', 'Energétique - énergies renouvelables', 'ENR.png', '98BF0E');
-INSERT INTO "sections" VALUES ('GBA', 'Génie biologique et agroalimentaire', 'STIA.png', '97A01B');
-INSERT INTO "sections" VALUES ('MAT', 'Matériaux', 'MAT.png', '32B199');
-INSERT INTO "sections" VALUES ('MI', 'Mécanique et interactions', 'MI.png', 'B8491E');
-INSERT INTO "sections" VALUES ('MEA', 'Microélectronique et automatique', 'MEA.png', '7C659F');
+INSERT INTO "sections" VALUES ('ENR', 'Energï¿½tique - ï¿½nergies renouvelables', 'ENR.png', '98BF0E');
+INSERT INTO "sections" VALUES ('GBA', 'Gï¿½nie biologique et agroalimentaire', 'STIA.png', '97A01B');
+INSERT INTO "sections" VALUES ('MAT', 'Matï¿½riaux', 'MAT.png', '32B199');
+INSERT INTO "sections" VALUES ('MI', 'Mï¿½canique et interactions', 'MI.png', 'B8491E');
+INSERT INTO "sections" VALUES ('MEA', 'Microï¿½lectronique et automatique', 'MEA.png', '7C659F');
 INSERT INTO "sections" VALUES ('STE', 'Sciences et technologies de l''eau', 'STE.png', '0E72B5');
-INSERT INTO "sections" VALUES ('EGC', 'Eau et génie civil', 'EGC.png', 'EE7F01');
-INSERT INTO "sections" VALUES ('MSI', 'Mécanique structures industrielles', 'MSI.png', '7693A8');
-INSERT INTO "sections" VALUES ('SE', 'Systèmes embarqués', 'SE.png', '398697');
+INSERT INTO "sections" VALUES ('EGC', 'Eau et gï¿½nie civil', 'EGC.png', 'EE7F01');
+INSERT INTO "sections" VALUES ('MSI', 'Mï¿½canique structures industrielles', 'MSI.png', '7693A8');
+INSERT INTO "sections" VALUES ('SE', 'Systï¿½mes embarquï¿½s', 'SE.png', '398697');
 
-/*	Create table "UE" for "Unités d'Enseignement"
+/*	Create table "UE" for "Unitï¿½s d'Enseignement"
 	* Informations from Polytech Montpellier website, and personnal knowledge.
 */
 CREATE TABLE "ue"(
@@ -53,10 +53,10 @@ CREATE TABLE "ue"(
     semestre	INTEGER		CHECK (semestre >= 1 AND semestre <= 10)	NOT NULL
 );
 INSERT INTO "ue" (nom_ue, section, annee, semestre) VALUES ('Fondamentaux de l''Informatique', 'IG', '3', '5');
-INSERT INTO "ue" (nom_ue, section, annee, semestre) VALUES ('Fondamentaux des Mathématiques', 'IG', '3', '5');
+INSERT INTO "ue" (nom_ue, section, annee, semestre) VALUES ('Fondamentaux des Mathï¿½matiques', 'IG', '3', '5');
 INSERT INTO "ue" (nom_ue, section, annee, semestre) VALUES ('Gestion et Communication', 'IG', '3', '5');
 INSERT INTO "ue" (nom_ue, section, annee, semestre) VALUES ('Fondamentaux de l''Informatique', 'IG', '3', '6');
-INSERT INTO "ue" (nom_ue, section, annee, semestre) VALUES ('Techniques de l''Ingénieur', 'IG', '3', '6');
+INSERT INTO "ue" (nom_ue, section, annee, semestre) VALUES ('Techniques de l''Ingï¿½nieur', 'IG', '3', '6');
 INSERT INTO "ue" (nom_ue, section, annee, semestre) VALUES ('Management', 'IG', '3', '6');
 INSERT INTO "ue" (nom_ue, section, annee, semestre) VALUES ('Langues et Communication', 'IG', '3', '6');
 
@@ -70,20 +70,20 @@ CREATE TABLE "matieres"(
     description	TEXT,
     UNIQUE(nom_mat, id_ue)
 );
-INSERT INTO "matieres" (nom_mat, id_ue, description) VALUES ('Algorithmique et structures de données', '1', 'Coef très haut, matière à ne surtout pas manquer !');
+INSERT INTO "matieres" (nom_mat, id_ue, description) VALUES ('Algorithmique et structures de donnï¿½es', '1', 'Coef trï¿½s haut, matiï¿½re ï¿½ ne surtout pas manquer !');
 INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('Architecture des ordinateurs et langage d''assemblage', '1');
-INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('Systèmes d''Exploitation 1', '1');
-INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('Réseaux', '1');
+INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('Systï¿½mes d''Exploitation 1', '1');
+INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('Rï¿½seaux', '1');
 INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('UNIX', '1');
-INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('Mathématiques pour l''Informatique', '2');
-INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('Modélisation et statistiques', '2');
-INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('Mathématiques de la Décision 1', '2');
+INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('Mathï¿½matiques pour l''Informatique', '2');
+INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('Modï¿½lisation et statistiques', '2');
+INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('Mathï¿½matiques de la Dï¿½cision 1', '2');
 INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('Introduction aux SI', '3');
 INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('ACSI', '3');
-INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('Culture économique et sociétale', '3');
-INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('Comptabilité des entreprises', '3');
+INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('Culture ï¿½conomique et sociï¿½tale', '3');
+INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('Comptabilitï¿½ des entreprises', '3');
 INSERT INTO "matieres" (nom_mat, id_ue) VALUES ('Anglais', '3');
-INSERT INTO "matieres" (nom_mat, id_ue, description) VALUES ('Intro architecture web', '4', 'Projet de fin d''année très important');
+INSERT INTO "matieres" (nom_mat, id_ue, description) VALUES ('Intro architecture web', '4', 'Projet de fin d''annï¿½e trï¿½s important');
 
 /*	Create users table
 	* Admin account : admin/admin
@@ -146,5 +146,5 @@ AFTER DELETE ON sujets
 FOR EACH ROW EXECUTE PROCEDURE decr_nbsujets();
 
 INSERT INTO "sujets" (titre, matiere, annee, posteur, url) VALUES ('Examen', 1, 2015, 1, 'algo2015.pdf');
-INSERT INTO "sujets" (titre, matiere, annee, correction, posteur, url) VALUES ('Corrigé algo 2015 officiel', 1, 2015, TRUE, 1, 'coralgo2015.pdf');
+INSERT INTO "sujets" (titre, matiere, annee, correction, posteur, url) VALUES ('Corrigï¿½ algo 2015 officiel', 1, 2015, TRUE, 1, 'coralgo2015.pdf');
 INSERT INTO "correspondance" (id_sujet, id_correction) VALUES (1, 2);
